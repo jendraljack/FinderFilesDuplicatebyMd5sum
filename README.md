@@ -1,5 +1,7 @@
 This is script for MT manager application
 terminal instead application.<br/>
+also can be used on termux android application.<br/>
+busybox required.<br/>
 no root android device required.<br/>
 sometimes, we have 2 or more same files with different name in entire folder.
 this script will find files, example this for image files.
