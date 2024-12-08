@@ -20,5 +20,5 @@ mkdir -p $parent/media/$@
 fi
 #
 echo "#!/system/bin/sh" > $curpath/02-$(basename $0)
-cat $curpath/files.log|busybox awk -v format=$@ '{print "if [ \"" $0 "\" != \"\$(realpath /sdcard)/media/" format "/\$(busybox md5sum " $0 "|busybox awk \x27{print \$1}\x27)." format "\" ]\nthen\nmv -f \"" $0 "\" \"\$(realpath /sdcard)/media/" format "/\$(busybox md5sum " $0 "|busybox awk \x27{print \$1}\x27)." format"\"\nfi"}' >> $curpath/02-$(basename $0)
+cat $curpath/files.log|busybox awk -v format=$@ '{print "if [ \"" $0 "\" != \"\$(realpath /sdcard)/media/" format "/\$(busybox md5sum \"" $0 "\"|busybox awk \x27{print \$1}\x27)." format "\" ]\nthen\nmv -f \"" $0 "\" \"\$(realpath /sdcard)/media/" format "/\$(busybox md5sum \"" $0 "\"|busybox awk \x27{print \$1}\x27)." format"\"\nfi"}' >> $curpath/02-$(basename $0)
 $(readlink /proc/$$/exe) $curpath/02-$(basename $0)
