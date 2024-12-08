@@ -10,4 +10,4 @@ if have 2 or more.<br/>
 meanwhile other files removed.<br/>
 find duplicate using md5sum check files.<br/>
 Command<br/>
-<pre>$ bash CollectJpgByMd5.sh</pre>
+<pre>$ bash pengumpulSemua.sh mp3/mp4/jpg/png/etc</pre>
